@@ -1,6 +1,3 @@
-################################################################################
-# EKS Addons
-################################################################################
 
 module "addons" {
   source  = "aws-ia/eks-blueprints-addons/aws"
@@ -11,7 +8,6 @@ module "addons" {
   cluster_version   = module.eks.cluster_version
   oidc_provider_arn = module.eks.oidc_provider_arn  
 
-  # EKS Addons
   eks_addons = {
     aws-ebs-csi-driver = {
       most_recent = true
